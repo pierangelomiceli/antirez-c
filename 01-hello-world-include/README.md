@@ -15,7 +15,7 @@ int main(){
 }
 ```
 
-che noi andiamo a compilare tramite il compilatore ad esempio `cc` o `gcc`,
+che noi andiamo a compilare tramite il compilatore, ad esempio `cc` o `gcc`,
 viene trasformato in linguaggio macchina.
 
 
@@ -24,10 +24,13 @@ viene trasformato in linguaggio macchina.
 
 cc hello_world.c
 
-# viene creato un file di output a.out che contiene sia il linguaggio macchina che altre informazioni utili
+# viene creato un file di output a.out che contiene 
+# sia il linguaggio macchina che altre informazioni utili
 
 
-# con il comando 'file' possiamo guardare effettivamente le intestazioni, che sono differenti a seconda della piattaforma (Mac, Linux, WSL) in cui viene eseguita l'operazione
+# con il comando 'file' possiamo guardare effettivamente le intestazioni, 
+# che saranno differenti a seconda della piattaforma (Mac, Linux, WSL)
+# in cui viene eseguita l'operazione
 file a.out 
 
 # per vedere il contenuto del file possiamo andare ad usare comando hexdump 
@@ -62,13 +65,15 @@ Se facciamo:
 cc -O2 -S hello_world.c
 ```
 
-Notiamo che il codice assembly generato sarà molto differente rispoeto a quello generato senza l'uso dell'opzione `-O2`
+Notiamo che il codice assembly generato sarà molto differente rispetto a quello generato senza l'uso dell'opzione `-O2`
 
 ## Un esempio banale di quello che il compilatore fa con le opzioni attivate
 
 Ad esempio:
 
-Senza ottimizzazione, il codice generato conterrebbe sostanzialmente la chiamata alla funzione `printf` come scritta nel codice. Ecco un estratto dei punti interessanti:
+Senza ottimizzazione, il codice generato conterrebbe sostanzialmente la chiamata alla funzione `printf` come scritta nel codice. 
+
+Ecco un estratto dei punti interessanti:
 
 ```s
 ; qui viene chiamata la printf
@@ -80,7 +85,7 @@ Senza ottimizzazione, il codice generato conterrebbe sostanzialmente la chiamata
 
 Usando invece l'opzione `-O2` viene richiamata la funzione `puts`.
 
-Altra cosa interessante da notare è che, dato che **puts**, di per sè, aggiunge un carattere newline `\n` quando  viene usato, il compilatore, sapendolo, va  rimuovere il carattere di newline dalla nostra stringa, di fatto, modificandola.
+Altra cosa interessante da notare è che, dato che **puts**, di per sè, aggiunge un carattere newline `\n` quando  viene usato, il compilatore, "sapendolo", va a rimuovere il carattere di newline dalla nostra stringa, di fatto, modificandola.
  
 ```s
 ; qui viene chiamata la puts
@@ -89,10 +94,8 @@ Altra cosa interessante da notare è che, dato che **puts**, di per sè, aggiung
 	.asciz	"Hello world"
 ```
 
-Altre differenze possono essere osservate, se facciamo un output su due file differenti ci accorgiamo a vista delle differenze
+Altre differenze possono essere osservate, se facciamo un output su due file differenti ci accorgiamo a vista delle differenze:
 ```sh
-# 
-
 # con -O0
 cc -S -O0 hello_world.c -o hello_world_o0.s
 
@@ -100,9 +103,9 @@ cc -S -O0 hello_world.c -o hello_world_o0.s
 cc -S -O2 hello_world.c -o hello_world_o2.s
 ```
 
-Questo per sottolineare il fatto che il compilatore è uno strumento evoluto e le ottimizzazioni che fa sono le più disparate.
+Tramite questo esempio si vuole sottolineare il fatto che il compilatore è uno strumento evoluto e le ottimizzazioni che fa sono le più disparate.
 
-Nello specifico caso, la differenza tra la scelta del compilatore di usare **puts** piuttosto che usare **printf**, è un caso base, ma dice molto sulla raffinatezza 
+Nello specifico caso, la differenza tra la scelta del compilatore di usare **puts** piuttosto che usare **printf**, è un caso base, ma dice molto sulla raffinatezza.
 
 La differenza di performance tra le due funzioni, è evidente anche andando a vedere il manuale di printf e di puts, [dove ci si accorge della differenza che è molta, anche solo a guardare la complessità tra le due funzioni](#kissandry)
 
@@ -128,17 +131,17 @@ int main(){
 ```
 Questa è una direttiva di preprocessore.
 
-Il compilatore, prima di compilare chiama un altro programma, a volte parte del compilatore stesso, processa queste direttive.
+Il compilatore, prima di compilare chiama un altro programma, a volte parte del compilatore stesso, che processa queste direttive.
 
-Le direttive non sono parte del linguaggiio ma sono operazioni preliminari da eseguire prima della compilazione vera e propria.
+Le direttive non sono parte del linguaggio, ma sono delle istruzioni di operazioni preliminari da eseguire prima della compilazione vera e propria.
 
-Nel caso specifico  `#include` non fa altro che prendere il contenuto di un file `stdio.h`, scompattarlo e piazzarlo nel punto in cui è scritto. 
+Nel caso specifico la `#include` non fa altro che prendere il contenuto di un file `stdio.h`, scompattarlo e piazzarlo nel punto in cui è scritto. 
 
 Dentro ci sono tutte le intestazioni delle funzioni che man mano andiamo usando.
 
 La `printf` è una funzione di libreria e non fa parte del linguaggio C stesso, quindi per usarla gli si deve dire dove si trova.
 
-Il file .h è un file di intestazione (header) che non contiene davvero la logica del proogramma, ma delle informazioni di contorno.
+Il file .h è un file di intestazione (header) che non contiene davvero la logica del programma, ma delle informazioni di "contorno".
 
 Avremmo potuto scrivere anche:
 
@@ -156,13 +159,13 @@ e nel `file.c`
 printf("Hello worldo\n");
 ```
 e non sarebbe cambiato nulla.
-in sostanza l'inclusione è segnaposto per una inclusione di file.
+in sostanza l'inclusione è un segnaposto per una inclusione di file.
 
 ### Se togliessimo l'inclusione il compilatore andrebbe in errore.
 
 - compilatori evoluti, che sanno che stai cercando di usare la printf ci dice che non puoi chiamare in maniera implicita
 
-- altri compilatori semplicemtne direbbero che non trova la funzione che vuoi, come se fosse una funzione sconosciuta
+- altri compilatori semplicemente direbbero che non trova la funzione voluta, come se fosse una funzione sconosciuta.
 
 ### prototipo di funzione
 
@@ -171,16 +174,14 @@ Andando a vedere il manuale della printf della libreria standard `man 3 printf`
 ```c
     int printf(const char *restrict format, ...);
 ```
-al contrario di una ipotetica `main()` non presenta le parentsi graffe con il corpo della funzione, terminando con un `;`
+al contrario di una ipotetica `main()`, questa funzione non presenta le parentesi graffe con il corpo contenente l'implmentazione, e termina con un `;`
 
-questo è il prototipo di funzione, che serve a definire il tipo ddi ritorno e gli argomenti che la funzione prende
-affinché un altro programma che la usa sappia il tipo di ritorno e gli argomenti senza necessariamente curarsi del [suo comportamento interno](#blackbox). 
+Questo è il prototipo di funzione, che serve a definire il tipo di ritorno e gli argomenti che la funzione prende affinché un altro programma che la usa conosca il tipo di ritorno e gli argomenti senza necessariamente curarsi del [suo comportamento interno](#blackbox). 
 
 ## quindi abbiamo visto
 
-- .h file: sorgente che non contiene la logica vea e proprio ma informazioni
-- .c file: programma
-
+- .h file: sorgente che non contiene la logica vera e proprio ma informazioni
+- .c file: il file con il programma o contenenti le funzioni con le implementazioni.
 
 
 # Pensiero laterale: a cosa mi ha fatto pensare
