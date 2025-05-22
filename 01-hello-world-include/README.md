@@ -1,6 +1,6 @@
 # 01: HelloWorld 
 
-Questo è un estratto della [prima lezione del corso di C](https://www.youtube.com/watch?v=HjXBXBgfKyk&t=26s) creato da [Salvatore Sanfilippo (antirez)](https://github.com/antirez)
+Questo è un estratto della [prima lezione del corso di C](https://www.youtube.com/watch?v=HjXBXBgfKyk) creato da [Salvatore Sanfilippo (antirez)](https://github.com/antirez)
 
 
 ## Il caso più semplice: Hello World
@@ -197,7 +197,7 @@ Una pratica comune nei linguaggi di programmazione in generale, sopratutto in qu
 
 Trovo anche una affinità con la DI dependency injection, la IOC (inversion of control) dei linguaggi di alto livello come C#
  
-<a id="kissdry"></a> 
+<a id="kissandry"></a> 
 ### KISS, DRY, SOLID, SRP, SOC OVVERO: La differenza tra fare una cosa e farla bene, oppure tante cose però male
 
 Un software o un pezzo di codice, è tanto più efficiente e veloce, tanto meno sono i compiti che questo deve svolgere, di contro, quando un programma aumenta le sue funzionalità, aumenta anche la complessità e la sua inefficienza.
