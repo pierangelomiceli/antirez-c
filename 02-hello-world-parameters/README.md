@@ -320,5 +320,25 @@ Comportamenti indefiniti ed effetti indesiderati sono da evitare, la programmazi
 Il caso limite è che un programma scritto per coincidenza funzioni non si sa per quale motivo.
 
 <a id="paramvsarg"></a>
+### Parametro e argomento 
+
 La distinzione tra argomento e parametro è nota in tutti i linguaggi. 
 Il parametro è quello presente nella dichiarazione della funzione, ed invece l'argomento è il valore "reale" passato quando viene eseguita la funzione.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br />
