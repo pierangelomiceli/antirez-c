@@ -1,6 +1,6 @@
 # 02: HelloWorld 02
 
-Questo è un estratto della [seconda lezione del corso di C](https://www.youtube.com/watch?v=Z84vlG1RRtg) creato da [Salvatore Sanfilippo (antirez)](https://github.com/antirez)
+Questo è un estratto della [seconda lezione](https://www.youtube.com/watch?v=Z84vlG1RRtg) del corso **Let's learn C** creato da [Salvatore Sanfilippo (antirez)](https://github.com/antirez)
 
 
 ## La definizione della funzione main: la firma 

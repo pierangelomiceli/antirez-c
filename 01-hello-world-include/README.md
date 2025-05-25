@@ -1,6 +1,6 @@
 # 01: HelloWorld 
 
-Questo è un estratto della [prima lezione del corso di C](https://www.youtube.com/watch?v=HjXBXBgfKyk) creato da [Salvatore Sanfilippo (antirez)](https://github.com/antirez)
+Questo è un estratto della [prima lezione](https://www.youtube.com/watch?v=HjXBXBgfKyk) del corso **Let's learn C** creato da [Salvatore Sanfilippo (antirez)](https://github.com/antirez)
 
 
 ## Il caso più semplice: Hello World
