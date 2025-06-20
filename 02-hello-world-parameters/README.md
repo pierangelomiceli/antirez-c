@@ -70,7 +70,7 @@ gcc hello_world.c
 # oppure concateniamo le due operazioni in un'unica riga:
 gcc hello_world.c && ./a.out
 
-# output atteso
+# output
 # Hello world 30
 ```
 
