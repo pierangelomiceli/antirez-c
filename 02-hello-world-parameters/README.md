@@ -85,7 +85,8 @@ Il primo [argomento](#paramvsarg) è il formato che contiene i caratteri `hello 
 **Nota:** la funzione *printf* è una [funzione variadica](https://www.gnu.org/software/libc/manual/html_node/Variadic-Functions.html): una funzione che accetta un numero variabile di argomenti, il numero di argomenti da dare a printf non è mai predeterminato.
 
 Se nella **printf** inseriamo `%d`, non appena la sua implemntazione si accorge della presenza di quello specifico argomento, ne richiederà il valore per sostituirlo al segnaposto.
-Il modo con cui viene cercato il parametro non è come nei linguaggi di alto livello in cui viene fornito un array di argomeniti: essendo il C un linguaggio compilato, avverrà una manipolazione a livello della memoria, aspetto che verrà affrontato più avanti.
+
+Il modo con cui viene cercato il parametro non è come nei linguaggi di alto livello in cui viene fornito un array di argomenti: essendo il C un linguaggio compilato, avverrà una manipolazione a livello della memoria, aspetto che verrà affrontato più avanti.
 
 Dato che la **printf** è una funzione più complessa delle altre, e dato che la usiamo intensamente, al momento ci accontentiamo di sapere che:
 
