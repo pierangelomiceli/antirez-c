@@ -367,3 +367,10 @@ In realtà, [H significa Home e dovrebbe portare il cursore in alto sulla finest
 In python, ad esempio, in modalità interprete, si deve scrivere una sequenza più completa, tuttavia se lanciamo lo script da file funziona alla stessa maniera con la stessa sequenza del C.
 
 Probabilemnte questo dipende dalla modalità con la quale venfono interpretati i caratteri di escape nella REPL in modalità RAW, rispetto alla modalità cooked con file eseguito.
+
+
+
+
+# links
+9-bit bytes and word
+https://cs.stackexchange.com/questions/67684/does-a-byte-contain-8-bits-or-9

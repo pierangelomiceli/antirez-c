@@ -1,4 +1,4 @@
-# 05: Variabili locali, globali, static e tipi di dati
+# 05: Stringhe e array
 
 Questo è un estratto della [quinta lezione](https://www.youtube.com/watch?v=SWWHqgSwQFw) del corso **Let's learn C** creato da [Salvatore Sanfilippo (antirez)](https://github.com/antirez)
 
