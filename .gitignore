@@ -1,3 +1,4 @@
 *.out
 *.s
 .vscode
+08_game_of_life
