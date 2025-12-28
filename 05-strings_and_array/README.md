@@ -20,7 +20,7 @@ int main(void){
 
 Abbiamo anche visto he la `printf` prende una stringa di formato con caratteri ed il segnaposto con `%d` ovvero il simbolo percentuale e delle lettere per indicare cosa daremo come argomenti e cosa deve stampato.
 
-In questo specific caso si aspetta un intero e lo stampa.
+In questo specifico caso si aspetta un intero e lo stampa.
 
 
 Eseguendo abbiamo:
